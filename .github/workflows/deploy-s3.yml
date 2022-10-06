@@ -6,7 +6,7 @@ on:
   #-- mainブランチにpushされたら起動する --#
   push:
       branches:
-        - main
+        - master
 
 #-------------------------#
 # 実際の処理
