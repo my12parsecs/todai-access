@@ -18,7 +18,7 @@ jobs:
     steps:
       #-- Gitリポジトリの内容を取得 --#
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@master
 
       - name: Deploy to S3
         #-- GitHub上に登録した変数を持ってくる --#
