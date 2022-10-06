@@ -1,31 +1,23 @@
-name: Upload to S3
-#-------------------------#
-# トリガー
-#-------------------------#
-on:
-  #-- mainブランチにpushされたら起動する --#
-  push:
-      branches:
-        - master
+name: Upload Website
 
-#-------------------------#
-# 実際の処理
-#-------------------------#
+on:
+  push:
+    branches:
+    - master
+
 jobs:
-  build:
-    #-- 仮想マシンのOSを指定（ここではUbuntuの最新版） --#
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      #-- Gitリポジトリの内容を取得 --#
-      - name: Checkout
-        uses: actions/checkout@master
+    - uses: actions/checkout@master
+    - uses: jakejarvis/s3-sync-action@master
+      with:
+        args: --acl public-read --follow-symlinks --delete
+      env:
+        AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
-      - name: Deploy to S3
-        #-- GitHub上に登録した変数を持ってくる --#
-        env:
-          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         #-- 仮想マシン上でコマンドを実行 --#
         run:
           aws s3 sync --delete --region ap-northeast-1 ./files/ s3://utfastest.com
