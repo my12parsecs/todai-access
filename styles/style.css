@@ -5,16 +5,18 @@ body{
 }
 
 header{
-  height: 80px;
+  height: 70px;
   width: 100%;
   background-color: #8e2216;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-
 
 .header-logo{
   float: left;
   font-size: 24px;
-  padding: 22px 20px;
+  margin-left: 20px;
   color: rgb(255, 255, 255);
 }
 .header-logo a{
@@ -48,7 +50,8 @@ header{
   list-style: none;
   float: left;
   color: rgb(255, 255, 255);
-  padding: 14px 5px;
+  margin-bottom: 15px;
+  margin-left: 10px;
 }
 
 .header-menu a{
@@ -98,7 +101,7 @@ h2{
 
 
 .neumorphism{
-  width: 900px;
+  width: 90vw;
   height: auto;
   margin: 50px auto;
   padding: 0px 20px 0px 0px;
@@ -111,9 +114,13 @@ h2{
   display: block;
   margin: 0 auto;
   border-radius: 3%;
-  width: 400px;
+  width: 40vw;
   box-shadow:  16px 16px 49px #737d78,
   -16px -16px 49px #ffffff;
+}
+.station-explanation{
+  width: 40vw;
+  font-size: 1.7vw;
 }
 .station-explanation span{
   text-decoration:underline;
@@ -131,13 +138,14 @@ figcaption{
 
 
 .access-map{
-  margin: 30px 0px 0px 0px;
+  margin: 30px auto 0px auto;
+  width: 80vw;
 }
 .access-map img{
   display: block;
   margin: 0px auto 90px auto;
   border-radius: 3%;
-  width: 800px;
+  width: 70vw;
 
   //neumorphism effect
   background: #d1e4da;
@@ -196,13 +204,14 @@ figcaption{
   display: block;
   margin: 0px auto 90px auto;
   border-radius: 3%;
-  width: 970px;
+  width: 85vw;
 
   //neumorphism effect
   background: #d1e4da;
   box-shadow:  16px 16px 49px #737d78,
              -16px -16px 49px #ffffff;
 }
+
 
 
 
@@ -262,6 +271,15 @@ button{
   box-shadow:  7px 7px 9px #626b66,
                -7px -7px 9px #ffffff;
 }
+.google-form{
+  display: flex;
+  margin: 0 auto;
+}
+
+
+
+
+
 
 
 
