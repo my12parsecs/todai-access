@@ -11,9 +11,18 @@ jobs:
         uses: actions/checkout@master  # リポジトリをチェックアウト
 
 
-      - name: Deploy  # S3にデプロイ 
+      - name: Deploy to S3  # S3にデプロイ 
+        uses: opspresso/action-s3-sync@master
         env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        run:
-          aws s3 cp --recursive --region ap-northeast-1 build s3://utfastest.com
+           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+           AWS_REGION: ${{ secrets.AWS_REGION }}
+           FROM_PATH: "./out/"
+           DEST_PATH: "s3://utfastest.com"
+        
+        
+#         env:
+#           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+#           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+#         run:
+#           aws s3 cp --recursive --region ap-northeast-1 build s3://utfastest.com
