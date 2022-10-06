@@ -21,7 +21,7 @@ jobs:
         
         
        # CloudFrontのキャッシュクリア
-      - name: Clear cache in CloudFront
+      - name: Clear cache in AWS CloudFront
         uses: chetan/invalidate-cloudfront-action@v1.2
         env:
            DISTRIBUTION: ${{ secrets.DISTRIBUTION }}
