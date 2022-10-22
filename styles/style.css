@@ -315,9 +315,9 @@ button{
 
 
 footer{
-  background-color: #2f5167;
+  background-color: #457798;
   color: #fff;
-  height: 120px;
+  height: 130px;
   padding: 20px 35px;
 }
 
@@ -348,4 +348,8 @@ footer{
 }
 .footer-list a:active {
   text-decoration: none;
+}
+
+.gh-icon{
+  width: 17px;
 }
