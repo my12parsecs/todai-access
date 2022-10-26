@@ -175,7 +175,7 @@ figcaption{
   border-radius: 3%;
   width: 70vw;
 
-  //neumorphism effect
+  /* neumorphism effect */
   background: #d1e4da;
   box-shadow:  16px 16px 49px #737d78,
              -16px -16px 49px #ffffff;
@@ -193,7 +193,7 @@ figcaption{
   margin: 0px 10px 20px 20px;
   text-align: right;
 
-  //neumorphism effect
+  /* neumorphism effect */
   background: #d1e4da;
   border-radius: 35px;
   box-shadow:  7px 7px 14px #69726d,
@@ -234,7 +234,7 @@ figcaption{
   border-radius: 3%;
   width: 85vw;
 
-  //neumorphism effect
+  /* neumorphism effect */
   background: #d1e4da;
   box-shadow:  16px 16px 49px #737d78,
              -16px -16px 49px #ffffff;
@@ -317,7 +317,7 @@ button{
 footer{
   background-color: #457798;
   color: #fff;
-  height: 130px;
+  height: 155px;
   padding: 20px 35px;
 }
 
