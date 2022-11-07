@@ -333,7 +333,7 @@ footer {
   list-style: none;
 }
 .footer-list a {
-  color: #fff;
+  color: rgb(255, 255, 255);
 }
 .footer-list a:link {
   text-decoration: none;
@@ -349,6 +349,6 @@ footer {
   text-decoration: none;
 }
 
-.gh-icon {
-  width: 17px;
+.fa-brands {
+  margin-top: 10px;
 }
