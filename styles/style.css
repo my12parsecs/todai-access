@@ -175,8 +175,7 @@ figcaption {
 .access-type {
   display: -webkit-flex;
   display: flex;
-  -webkit-justify-content: space-around;
-  justify-content: space-around;
+  justify-content: center;
 }
 .access-each {
   width: max-content;
