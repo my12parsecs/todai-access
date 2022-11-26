@@ -96,7 +96,8 @@ p {
 } */
 
 .neumorphism {
-  width: 90vw;
+  width: 85vw;
+  max-width: 900px;
   height: auto;
   margin: 50px auto;
   padding: 0px 20px 0px 0px;
@@ -115,12 +116,13 @@ p {
   display: block;
   margin: 0 auto;
   border-radius: 3%;
-  width: 40vw;
+  width: 35vw;
+  max-width: 400px;
   box-shadow: 16px 16px 49px #737d78, -16px -16px 49px #ffffff;
 }
 .station-explanation {
   width: 40vw;
-  font-size: 1.7vw;
+  font-size: 15px;
 }
 .station-explanation span {
   text-decoration: underline;
