@@ -145,9 +145,8 @@ figcaption {
 }
 .official-site {
   display: flex;
-  margin: auto auto;
+  justify-content: center;
   margin-top: 14px;
-  width: 232px;
   color: black;
   font-size: 18px;
 }
@@ -350,6 +349,10 @@ footer {
   text-decoration: none;
 }
 
+
+.github-icon{
+  display: none;
+}
 .fa-brands {
   margin-top: 10px;
 }
